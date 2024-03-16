@@ -20,32 +20,34 @@ function MarketingPage() {
         <h1 className="text-xl lg:text-3xl font-bold text-neutral-800 max-w-[480px] text-center">
           Learn, practice and master a new language with Linguify today!
         </h1>
-        <ClerkLoading>
-          <Loader2 className="h-5 w-5 text-muted-foreground animate-spin" />
-        </ClerkLoading>
-        <ClerkLoaded>
-          <SignedOut>
-            <SignUpButton
-              mode="modal"
-              afterSignInUrl="/learn"
-              afterSignUpUrl="/learn"
-            >
-              <Button size="lg" variant="secondary" className="w-full">
-                Get Started
+        <div className="flex flex-col items-center gap-y-3 max-w-[320px] w-full">
+          <ClerkLoading>
+            <Loader2 className="h-5 w-5 text-muted-foreground animate-spin" />
+          </ClerkLoading>
+          <ClerkLoaded>
+            <SignedOut>
+              <SignUpButton
+                mode="modal"
+                afterSignInUrl="/learn"
+                afterSignUpUrl="/learn"
+              >
+                <Button size="lg" variant="secondary" className="w-full">
+                  Get Started
+                </Button>
+              </SignUpButton>
+              <SignInButton mode="modal">
+                <Button size="lg" variant="primaryOutline" className="w-full">
+                  I Already Have An Account
+                </Button>
+              </SignInButton>
+            </SignedOut>
+            <SignedIn>
+              <Button size="lg" variant="primary" className="w-full">
+                <Link href="/learn">Continue your learning journey!</Link>
               </Button>
-            </SignUpButton>
-            <SignInButton mode="modal">
-              <Button size="lg" variant="primaryOutline" className="w-full">
-                I Already Have An Account
-              </Button>
-            </SignInButton>
-          </SignedOut>
-          <SignedIn>
-            <Button size="lg" variant="primary" className="w-full">
-              <Link href="/learn">Continue your learning journey!</Link>
-            </Button>
-          </SignedIn>
-        </ClerkLoaded>
+            </SignedIn>
+          </ClerkLoaded>
+        </div>
       </div>
     </div>
   );
