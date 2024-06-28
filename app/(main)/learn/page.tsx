@@ -1,7 +1,7 @@
 import React from "react";
 import StickyWrapper from "@/components/stickyWrapper";
 import FeedWrapper from "@/components/feedWrapper";
-import Header from "./_components/header";
+import Header from "./header";
 import UserProgress from "@/components/userProgress";
 function Learn() {
   return (
