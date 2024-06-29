@@ -42,9 +42,11 @@ function MarketingPage() {
               </SignInButton>
             </SignedOut>
             <SignedIn>
-              <Button size="lg" variant="primary" className="w-full">
-                <Link href="/learn">Continue your learning journey!</Link>
-              </Button>
+              <Link href="/learn">
+                <Button size="lg" variant="primary" className="w-full">
+                  Continue your learning journey!
+                </Button>
+              </Link>
             </SignedIn>
           </ClerkLoaded>
         </div>
