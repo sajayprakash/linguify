@@ -58,6 +58,30 @@ const main = async () => {
         order: 1,
         title: "Hiragana",
       },
+      {
+        id: 2,
+        unitId: 1,
+        order: 2,
+        title: "Katakana",
+      },
+      {
+        id: 3,
+        unitId: 1,
+        order: 3,
+        title: "Kanji",
+      },
+      {
+        id: 4,
+        unitId: 1,
+        order: 4,
+        title: "Numbers",
+      },
+      {
+        id: 5,
+        unitId: 1,
+        order: 5,
+        title: "Greetings",
+      },
     ]);
 
     await db.insert(schema.challenges).values([
