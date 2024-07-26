@@ -3,22 +3,37 @@ import StickyWrapper from "@/components/stickyWrapper";
 import FeedWrapper from "@/components/feedWrapper";
 import Header from "./header";
 import UserProgress from "@/components/userProgress";
-import { getUnits, getUserProgress } from "@/db/queries";
+import {
+  getCourseProgress,
+  getLessonPercentage,
+  getUnits,
+  getUserProgress,
+} from "@/db/queries";
 import { redirect } from "next/navigation";
 import { Unit } from "./_components/unit";
 
 async function Learn() {
   const userProgressData = getUserProgress();
   const unitsData = getUnits();
+  const courseProgressData = getCourseProgress();
+  const lessonPercentageData = getLessonPercentage();
 
-  const [userProgress, units] = await Promise.all([
-    userProgressData,
-    unitsData,
-  ]);
+  const [userProgress, units, courseProgress, lessonPercentage] =
+    await Promise.all([
+      userProgressData,
+      unitsData,
+      courseProgressData,
+      lessonPercentageData,
+    ]);
 
   if (!userProgress || !userProgress.activeCourse) {
     redirect("/courses");
   }
+
+  if (!courseProgress) {
+    redirect(`/courses}`);
+  }
+
   return (
     <div className="flex gap-[48px] px-6">
       <FeedWrapper>
@@ -31,8 +46,8 @@ async function Learn() {
               description={unit.description}
               title={unit.title}
               lessons={unit.lessons}
-              activeLesson={undefined}
-              activeLessonPercentage={0}
+              activeLesson={courseProgress.activeLesson}
+              activeLessonPercentage={lessonPercentage}
             />
           </div>
         ))}
