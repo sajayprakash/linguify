@@ -71,7 +71,7 @@ function Card({
         {type === "ASSIST" && <div />}
         <p
           className={cn(
-            "text-neutral-600 text-sm lg:text-base",
+            "text-neutral-600 text-lg lg:text-xl",
             selected && "text-sky-500 border-sky-300 ",
             selected &&
               status === "correct" &&
