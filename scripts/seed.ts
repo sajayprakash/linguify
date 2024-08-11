@@ -92,38 +92,120 @@ const main = async () => {
         order: 1,
         question: "What is 'a' in Hiragana?",
       },
+      {
+        id: 2,
+        lessonId: 1,
+        type: "ASSIST",
+        order: 2,
+        question: "I",
+      },
+      {
+        id: 3,
+        lessonId: 1,
+        type: "SELECT",
+        order: 3,
+        question: "Which one of these is 'o' in Hiragana?",
+      },
     ]);
 
     await db.insert(schema.challengeOptions).values([
       {
-        id: 1,
         challengeId: 1,
         correct: true,
         text: "あ",
         audioSrc: "/jp-hiragana-a.mp3",
       },
       {
-        id: 2,
         challengeId: 1,
         correct: false,
         text: "い",
         audioSrc: "/jp-hiragana-i.mp3",
       },
       {
-        id: 3,
         challengeId: 1,
         correct: false,
         text: "う",
         audioSrc: "/jp-hiragana-u.mp3",
       },
       {
-        id: 4,
         challengeId: 1,
         correct: false,
         text: "え",
         audioSrc: "/jp-hiragana-e.mp3",
       },
+      {
+        challengeId: 1,
+        correct: false,
+        text: "お",
+        audioSrc: "/jp-hiragana-o.mp3",
+      },
     ]);
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 2,
+        correct: false,
+        text: "あ",
+        audioSrc: "/jp-hiragana-a.mp3",
+      },
+      {
+        challengeId: 2,
+        correct: true,
+        text: "い",
+        audioSrc: "/jp-hiragana-i.mp3",
+      },
+      {
+        challengeId: 2,
+        correct: false,
+        text: "う",
+        audioSrc: "/jp-hiragana-u.mp3",
+      },
+      {
+        challengeId: 2,
+        correct: false,
+        text: "え",
+        audioSrc: "/jp-hiragana-e.mp3",
+      },
+      {
+        challengeId: 2,
+        correct: false,
+        text: "お",
+        audioSrc: "/jp-hiragana-o.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 3,
+        correct: false,
+        text: "あ",
+        audioSrc: "/jp-hiragana-a.mp3",
+      },
+      {
+        challengeId: 3,
+        correct: false,
+        text: "い",
+        audioSrc: "/jp-hiragana-i.mp3",
+      },
+      {
+        challengeId: 3,
+        correct: false,
+        text: "う",
+        audioSrc: "/jp-hiragana-u.mp3",
+      },
+      {
+        challengeId: 3,
+        correct: false,
+        text: "え",
+        audioSrc: "/jp-hiragana-e.mp3",
+      },
+      {
+        challengeId: 3,
+        correct: true,
+        text: "お",
+        audioSrc: "/jp-hiragana-o.mp3",
+      },
+    ]);
+
     console.log("Seeding finished");
   } catch (error) {
     console.error(error);

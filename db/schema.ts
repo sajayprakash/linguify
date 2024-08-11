@@ -14,6 +14,8 @@ export const courses = pgTable("courses", {
   imageSrc: text("image_src").notNull(),
 });
 
+export const maxHearts: number = 5;
+
 export const userProgress = pgTable("user_progress", {
   userId: text("user_id").primaryKey(),
   userName: text("user_name").notNull().default("User"),
@@ -21,7 +23,7 @@ export const userProgress = pgTable("user_progress", {
   activeCourseId: integer("active_course_id").references(() => courses.id, {
     onDelete: "cascade",
   }),
-  hearts: integer("hearts").notNull().default(5),
+  hearts: integer("hearts").notNull().default(maxHearts),
   points: integer("points").notNull().default(0),
 });
 
