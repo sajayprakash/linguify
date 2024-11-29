@@ -2,13 +2,12 @@ import { useKey, useMedia } from "react-use";
 import { CheckCircle, XCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { redirect } from "next/navigation";
 
 type FooterProps = {
   onCheck: () => void;
   status: "correct" | "incorrect" | "none" | "completed";
   disabled?: boolean;
-  lessonId?: boolean;
+  lessonId?: number;
 };
 function Footer({ onCheck, status, disabled, lessonId }: FooterProps) {
   useKey("Enter", onCheck, {}, [onCheck]);
@@ -38,7 +37,7 @@ function Footer({ onCheck, status, disabled, lessonId }: FooterProps) {
           <Button
             variant={"default"}
             size={isMobile ? "sm" : "lg"}
-            onClick={() => redirect(`/lesson/${lessonId}`)}
+            onClick={() => (window.location.href = `/lesson/${lessonId}`)}
           >
             Practice again
           </Button>
