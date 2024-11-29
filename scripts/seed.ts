@@ -446,6 +446,211 @@ const main = async () => {
       },
     ]);
 
+    await db.insert(schema.challenges).values([
+      {
+        id: 10,
+        lessonId: 4,
+        type: "SELECT",
+        order: 1,
+        question: "What is '1' in Japanese?",
+      },
+      {
+        id: 11,
+        lessonId: 4,
+        type: "ASSIST",
+        order: 2,
+        question: "5",
+      },
+      {
+        id: 12,
+        lessonId: 4,
+        type: "SELECT",
+        order: 3,
+        question: "Which one of these is '10' in Japanese?",
+      },
+      {
+        id: 13,
+        lessonId: 5,
+        type: "SELECT",
+        order: 1,
+        question: "What is 'Good Morning' in Japanese?",
+      },
+      {
+        id: 14,
+        lessonId: 5,
+        type: "ASSIST",
+        order: 2,
+        question: "Thank you",
+      },
+      {
+        id: 15,
+        lessonId: 5,
+        type: "SELECT",
+        order: 3,
+        question: "Which one means 'Good evening'?",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 10,
+        correct: true,
+        text: "いち",
+        audioSrc: "/jp-numbers-1.mp3",
+      },
+      {
+        challengeId: 10,
+        correct: false,
+        text: "に",
+        audioSrc: "/jp-numbers-2.mp3",
+      },
+      {
+        challengeId: 10,
+        correct: false,
+        text: "さん",
+        audioSrc: "/jp-numbers-3.mp3",
+      },
+      {
+        challengeId: 10,
+        correct: false,
+        text: "よん",
+        audioSrc: "/jp-numbers-4.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 11,
+        correct: true,
+        text: "ご",
+        audioSrc: "/jp-numbers-5.mp3",
+      },
+      {
+        challengeId: 11,
+        correct: false,
+        text: "ろく",
+        audioSrc: "/jp-numbers-6.mp3",
+      },
+      {
+        challengeId: 11,
+        correct: false,
+        text: "なな",
+        audioSrc: "/jp-numbers-7.mp3",
+      },
+      {
+        challengeId: 11,
+        correct: false,
+        text: "はち",
+        audioSrc: "/jp-numbers-8.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 12,
+        correct: true,
+        text: "じゅう",
+        audioSrc: "/jp-numbers-10.mp3",
+      },
+      {
+        challengeId: 12,
+        correct: false,
+        text: "きゅう",
+        audioSrc: "/jp-numbers-9.mp3",
+      },
+      {
+        challengeId: 12,
+        correct: false,
+        text: "はち",
+        audioSrc: "/jp-numbers-8.mp3",
+      },
+      {
+        challengeId: 12,
+        correct: false,
+        text: "なな",
+        audioSrc: "/jp-numbers-7.mp3",
+      },
+    ]);
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 13,
+        correct: true,
+        text: "おはようございます",
+        audioSrc: "/jp-greetings-ohayou.mp3",
+      },
+      {
+        challengeId: 13,
+        correct: false,
+        text: "こんにちは",
+        audioSrc: "/jp-greetings-konnichiwa.mp3",
+      },
+      {
+        challengeId: 13,
+        correct: false,
+        text: "こんばんは",
+        audioSrc: "/jp-greetings-konbanwa.mp3",
+      },
+      {
+        challengeId: 13,
+        correct: false,
+        text: "おやすみなさい",
+        audioSrc: "/jp-greetings-oyasumi.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 14,
+        correct: true,
+        text: "ありがとう",
+        audioSrc: "/jp-greetings-arigatou.mp3",
+      },
+      {
+        challengeId: 14,
+        correct: false,
+        text: "さようなら",
+        audioSrc: "/jp-greetings-sayounara.mp3",
+      },
+      {
+        challengeId: 14,
+        correct: false,
+        text: "すみません",
+        audioSrc: "/jp-greetings-sumimasen.mp3",
+      },
+      {
+        challengeId: 14,
+        correct: false,
+        text: "はじめまして",
+        audioSrc: "/jp-greetings-hajimemashite.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 15,
+        correct: true,
+        text: "こんばんは",
+        audioSrc: "/jp-greetings-konbanwa.mp3",
+      },
+      {
+        challengeId: 15,
+        correct: false,
+        text: "おはよう",
+        audioSrc: "/jp-greetings-ohayou.mp3",
+      },
+      {
+        challengeId: 15,
+        correct: false,
+        text: "こんにちは",
+        audioSrc: "/jp-greetings-konnichiwa.mp3",
+      },
+      {
+        challengeId: 15,
+        correct: false,
+        text: "おやすみなさい",
+        audioSrc: "/jp-greetings-oyasumi.mp3",
+      },
+    ]);
     console.log("Seeding finished");
   } catch (error) {
     console.error(error);
