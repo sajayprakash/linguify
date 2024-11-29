@@ -23,6 +23,10 @@ function List({ courses, activeCourseId }: ListProps) {
       upsertUserProgress(id).catch(() => toast.error("Something went wrong!"));
     });
   };
+
+  // Remove completed courses from the list
+  const comingSoonCourses = [2, 3, 4];
+
   return (
     <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fill,minmax(210px,1fr))] gap-4">
       {courses.map((course) => (
@@ -33,6 +37,7 @@ function List({ courses, activeCourseId }: ListProps) {
           imageSrc={course.imageSrc}
           onClick={onClick}
           disabled={pending}
+          comingSoon={comingSoonCourses.includes(course.id)}
           isActive={course.id === activeCourseId}
         />
       ))}
