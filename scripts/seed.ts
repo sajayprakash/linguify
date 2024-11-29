@@ -205,52 +205,28 @@ const main = async () => {
         audioSrc: "/jp-hiragana-o.mp3",
       },
     ]);
-    await db.insert(schema.units).values([
-      {
-        id: 2,
-        courseId: 1,
-        title: "Unit 2",
-        description: "Introduction to Katakana",
-        order: 2,
-      },
-    ]);
-
-    await db.insert(schema.lessons).values([
-      {
-        id: 6,
-        unitId: 2,
-        order: 1,
-        title: "Katakana Basics",
-      },
-      {
-        id: 7,
-        unitId: 2,
-        order: 2,
-        title: "Katakana Advanced",
-      },
-    ]);
 
     await db.insert(schema.challenges).values([
       {
         id: 4,
-        lessonId: 6,
+        lessonId: 2,
         type: "SELECT",
         order: 1,
         question: "What is 'ka' in Katakana?",
       },
       {
         id: 5,
-        lessonId: 6,
+        lessonId: 2,
         type: "ASSIST",
         order: 2,
-        question: "Ki",
+        question: "Ke",
       },
       {
         id: 6,
-        lessonId: 6,
+        lessonId: 2,
         type: "SELECT",
         order: 3,
-        question: "Which one of these is 'ku' in Katakana?",
+        question: "Which one of these is 'ko' in Katakana?",
       },
     ]);
 
@@ -297,8 +273,8 @@ const main = async () => {
       {
         challengeId: 5,
         correct: true,
-        text: "キ",
-        audioSrc: "/jp-katakana-ki.mp3",
+        text: "ケ",
+        audioSrc: "/jp-katakana-ke.mp3",
       },
       {
         challengeId: 5,
@@ -309,8 +285,8 @@ const main = async () => {
       {
         challengeId: 5,
         correct: false,
-        text: "ケ",
-        audioSrc: "/jp-katakana-ke.mp3",
+        text: "キ",
+        audioSrc: "/jp-katakana-ki.mp3",
       },
       {
         challengeId: 5,
@@ -335,7 +311,7 @@ const main = async () => {
       },
       {
         challengeId: 6,
-        correct: true,
+        correct: false,
         text: "ク",
         audioSrc: "/jp-katakana-ku.mp3",
       },
@@ -347,11 +323,12 @@ const main = async () => {
       },
       {
         challengeId: 6,
-        correct: false,
+        correct: true,
         text: "コ",
         audioSrc: "/jp-katakana-ko.mp3",
       },
     ]);
+
     console.log("Seeding finished");
   } catch (error) {
     console.error(error);
