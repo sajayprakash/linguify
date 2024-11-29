@@ -106,107 +106,6 @@ const main = async () => {
         order: 3,
         question: "Which one of these is 'o' in Hiragana?",
       },
-    ]);
-
-    await db.insert(schema.challengeOptions).values([
-      {
-        challengeId: 1,
-        correct: true,
-        text: "あ",
-        audioSrc: "/jp-hiragana-a.mp3",
-      },
-      {
-        challengeId: 1,
-        correct: false,
-        text: "い",
-        audioSrc: "/jp-hiragana-i.mp3",
-      },
-      {
-        challengeId: 1,
-        correct: false,
-        text: "う",
-        audioSrc: "/jp-hiragana-u.mp3",
-      },
-      {
-        challengeId: 1,
-        correct: false,
-        text: "え",
-        audioSrc: "/jp-hiragana-e.mp3",
-      },
-      {
-        challengeId: 1,
-        correct: false,
-        text: "お",
-        audioSrc: "/jp-hiragana-o.mp3",
-      },
-    ]);
-    await db.insert(schema.challengeOptions).values([
-      {
-        challengeId: 2,
-        correct: false,
-        text: "あ",
-        audioSrc: "/jp-hiragana-a.mp3",
-      },
-      {
-        challengeId: 2,
-        correct: true,
-        text: "い",
-        audioSrc: "/jp-hiragana-i.mp3",
-      },
-      {
-        challengeId: 2,
-        correct: false,
-        text: "う",
-        audioSrc: "/jp-hiragana-u.mp3",
-      },
-      {
-        challengeId: 2,
-        correct: false,
-        text: "え",
-        audioSrc: "/jp-hiragana-e.mp3",
-      },
-      {
-        challengeId: 2,
-        correct: false,
-        text: "お",
-        audioSrc: "/jp-hiragana-o.mp3",
-      },
-    ]);
-
-    await db.insert(schema.challengeOptions).values([
-      {
-        challengeId: 3,
-        correct: false,
-        text: "あ",
-        audioSrc: "/jp-hiragana-a.mp3",
-      },
-      {
-        challengeId: 3,
-        correct: false,
-        text: "い",
-        audioSrc: "/jp-hiragana-i.mp3",
-      },
-      {
-        challengeId: 3,
-        correct: false,
-        text: "う",
-        audioSrc: "/jp-hiragana-u.mp3",
-      },
-      {
-        challengeId: 3,
-        correct: false,
-        text: "え",
-        audioSrc: "/jp-hiragana-e.mp3",
-      },
-      {
-        challengeId: 3,
-        correct: true,
-        text: "お",
-        audioSrc: "/jp-hiragana-o.mp3",
-      },
-    ]);
-
-    await db.insert(schema.challenges).values([
       {
         id: 4,
         lessonId: 2,
@@ -228,6 +127,125 @@ const main = async () => {
         order: 3,
         question: "Which one of these is 'ko' in Katakana?",
       },
+      {
+        id: 7,
+        lessonId: 3,
+        type: "SELECT",
+        order: 1,
+        question: "What is the Kanji for 'water'?",
+      },
+      {
+        id: 8,
+        lessonId: 3,
+        type: "ASSIST",
+        order: 2,
+        question: "Fire",
+      },
+      {
+        id: 9,
+        lessonId: 3,
+        type: "SELECT",
+        order: 3,
+        question: "Which one of these is the Kanji for 'tree'?",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 1,
+        correct: true,
+        text: "あ",
+        audioSrc: "/jp-hiragana-a.mp3",
+      },
+      {
+        challengeId: 1,
+        correct: false,
+        text: "い",
+        audioSrc: "/jp-hiragana-i.mp3",
+      },
+      {
+        challengeId: 1,
+        correct: false,
+        text: "う",
+        audioSrc: "/jp-hiragana-u.mp3",
+      },
+      {
+        challengeId: 1,
+        correct: false,
+        text: "え",
+        audioSrc: "/jp-hiragana-e.mp3",
+      },
+      {
+        challengeId: 1,
+        correct: false,
+        text: "お",
+        audioSrc: "/jp-hiragana-o.mp3",
+      },
+    ]);
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 2,
+        correct: false,
+        text: "あ",
+        audioSrc: "/jp-hiragana-a.mp3",
+      },
+      {
+        challengeId: 2,
+        correct: true,
+        text: "い",
+        audioSrc: "/jp-hiragana-i.mp3",
+      },
+      {
+        challengeId: 2,
+        correct: false,
+        text: "う",
+        audioSrc: "/jp-hiragana-u.mp3",
+      },
+      {
+        challengeId: 2,
+        correct: false,
+        text: "え",
+        audioSrc: "/jp-hiragana-e.mp3",
+      },
+      {
+        challengeId: 2,
+        correct: false,
+        text: "お",
+        audioSrc: "/jp-hiragana-o.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 3,
+        correct: false,
+        text: "あ",
+        audioSrc: "/jp-hiragana-a.mp3",
+      },
+      {
+        challengeId: 3,
+        correct: false,
+        text: "い",
+        audioSrc: "/jp-hiragana-i.mp3",
+      },
+      {
+        challengeId: 3,
+        correct: false,
+        text: "う",
+        audioSrc: "/jp-hiragana-u.mp3",
+      },
+      {
+        challengeId: 3,
+        correct: false,
+        text: "え",
+        audioSrc: "/jp-hiragana-e.mp3",
+      },
+      {
+        challengeId: 3,
+        correct: true,
+        text: "お",
+        audioSrc: "/jp-hiragana-o.mp3",
+      },
     ]);
 
     await db.insert(schema.challengeOptions).values([
@@ -326,6 +344,105 @@ const main = async () => {
         correct: true,
         text: "コ",
         audioSrc: "/jp-katakana-ko.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 7,
+        correct: true,
+        text: "水",
+        audioSrc: "/jp-kanji-water.mp3",
+      },
+      {
+        challengeId: 7,
+        correct: false,
+        text: "火",
+        audioSrc: "/jp-kanji-fire.mp3",
+      },
+      {
+        challengeId: 7,
+        correct: false,
+        text: "木",
+        audioSrc: "/jp-kanji-tree.mp3",
+      },
+      {
+        challengeId: 7,
+        correct: false,
+        text: "土",
+        audioSrc: "/jp-kanji-earth.mp3",
+      },
+      {
+        challengeId: 7,
+        correct: false,
+        text: "金",
+        audioSrc: "/jp-kanji-gold.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 8,
+        correct: false,
+        text: "水",
+        audioSrc: "/jp-kanji-water.mp3",
+      },
+      {
+        challengeId: 8,
+        correct: true,
+        text: "火",
+        audioSrc: "/jp-kanji-fire.mp3",
+      },
+      {
+        challengeId: 8,
+        correct: false,
+        text: "木",
+        audioSrc: "/jp-kanji-tree.mp3",
+      },
+      {
+        challengeId: 8,
+        correct: false,
+        text: "土",
+        audioSrc: "/jp-kanji-earth.mp3",
+      },
+      {
+        challengeId: 8,
+        correct: false,
+        text: "金",
+        audioSrc: "/jp-kanji-gold.mp3",
+      },
+    ]);
+
+    await db.insert(schema.challengeOptions).values([
+      {
+        challengeId: 9,
+        correct: false,
+        text: "水",
+        audioSrc: "/jp-kanji-water.mp3",
+      },
+      {
+        challengeId: 9,
+        correct: false,
+        text: "火",
+        audioSrc: "/jp-kanji-fire.mp3",
+      },
+      {
+        challengeId: 9,
+        correct: true,
+        text: "木",
+        audioSrc: "/jp-kanji-tree.mp3",
+      },
+      {
+        challengeId: 9,
+        correct: false,
+        text: "土",
+        audioSrc: "/jp-kanji-earth.mp3",
+      },
+      {
+        challengeId: 9,
+        correct: false,
+        text: "金",
+        audioSrc: "/jp-kanji-gold.mp3",
       },
     ]);
 
