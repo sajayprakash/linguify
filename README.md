@@ -1,8 +1,7 @@
 # Linguify
+![linguify-banner](https://github.com/user-attachments/assets/23d71230-1595-43c0-9ca5-2023f908072b)
+<p align='center'>Linguify is a language learning platform. Learn a new language today!<br />Demo - https://linguify-demo.vercel.app</p>
 
-Linguify is a language learning platform. Learn a new language today!
-
-Demo - https://linguify-demo.vercel.app
 
 ## Environment Variables
 
