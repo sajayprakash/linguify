@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   title: "Linguify",
   description:
     "Linguify is a language learning platform. Learn a new language today!",
+  openGraph: {
+    type: "website",
+    url: "https://linguify-demo.vercel.app",
+    title: "Linguify",
+    description:
+      "Linguify is a language learning platform. Learn a new language today!",
+    siteName: "Linguify",
+    images: [
+      {
+        url: "https://linguify-demo.vercel.app/linguify-banner.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
